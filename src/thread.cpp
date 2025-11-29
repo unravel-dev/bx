@@ -254,7 +254,7 @@ namespace bx
 			uint32_t size = length*sizeof(wchar_t);
 			wchar_t* name = (wchar_t*)BX_STACK_ALLOC(size);
 			mbstowcs(name, _name, size-2);
-			name[size-2] = 0;
+			// name[size-2] = 0;
 			SetThreadDescription(ti->m_handle, name);
 		}
 #	if BX_COMPILER_MSVC
